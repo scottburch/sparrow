@@ -100,12 +100,10 @@ for more possibilities.__
 
 ##Documentation
 
-Most of the functions below will show two possible ways to run them.
-One is running the function directly and the other is using the async monad. (see .async())
 
 ####createTestWindow('name')
 
-Opens a test window tab and creates $name variable in the test scope.
+Opens a test window tab and creates *$name* variable in the test scope.
 ```javascript
     it('should do something', function() {
         createTestWindow('aTestWindow');
@@ -204,7 +202,7 @@ Wait until the text is visible on the webpage
 
 ####.waitForSelector(selector, doneCB)
 
-Wait until the selector is in the dom
+Wait until the selected element is in the dom
 
 ```javascript
     it('should do something', function(done) {
@@ -216,3 +214,103 @@ Wait until the selector is in the dom
     });
 ```
 
+####.waitUntilVisible(selector, doneCB)
+
+Wait until the selected element is visible
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .waitUntilVisible('#myAsyncModal')
+            .run()
+    });
+```
+
+####.waitWhileVisible(selector, doneCB)
+
+Wait while the selected element is visible
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .waitWhileVisible('#loadingMessage')
+            .run()
+    });
+```
+
+####.wait(ms, doneCB)
+
+Wait for some period of milliseconds
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .wait(2000)
+            .click('#something else')
+            .run()
+    });
+```
+
+####.click(selector)
+
+Click on some selected element
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .wait(2000)
+            .click('#something else')
+            .run()
+    });
+```
+
+####.log(message)
+
+Send a log message to the console.
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .log('I clicked it')
+            .run()
+    });
+```
+
+####.fill(selector, formData)
+
+Fill in the selected form
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .fill('#my-form', {name: 'Scott', email:'me@mine.com'})
+            .click('#submit')
+            .run()
+    });
+```
+
+####.close()
+
+Close an open test window (tab)
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .fill('#my-form', {name: 'Scott', email:'me@mine.com'})
+            .click('#submit')
+            .close()
+            .run()
+    });
+```
