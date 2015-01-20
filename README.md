@@ -20,7 +20,7 @@ Sparrow:
 
 3) type __'npm install'__ (you must have npm/node installed)
 
-4) type __'grunt jasmine:headed:build'__ to create specRunner.html
+4) type __'grunt jasmine:headed:build'__ to create specRunner.html (requires [grunt](http://gruntjs.com/))
 
 5) open __runner.html__ in a browser (tested with newest Chrome and FF)
 __(NOTE: FF seems to allow running from the local filesystem.  Chrome requires running it from a web server)__

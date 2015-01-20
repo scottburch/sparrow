@@ -31,13 +31,13 @@
     <leaf>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6075949" vertical-offset="0" max-vertical-offset="5895">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="5895">
+              <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
+          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
         </entry>
@@ -619,7 +619,7 @@
       <updated>1421698518112</updated>
       <workItem from="1421698524482" duration="1288000" />
       <workItem from="1421713376713" duration="15851000" />
-      <workItem from="1421737830692" duration="9819000" />
+      <workItem from="1421737830692" duration="10846000" />
     </task>
     <task id="LOCAL-00001" summary="nameing rework">
       <created>1421721158749</created>
@@ -771,11 +771,23 @@
       <option name="project" value="LOCAL" />
       <updated>1421783288165</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="doc change">
+      <created>1421784900843</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1421784900843</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added download link to docs">
+      <created>1421785244475</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1421785244475</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26958000" />
+    <option name="totallyTimeSpent" value="27985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="36" width="1266" height="822" extended-state="0" />
@@ -839,7 +851,9 @@
     <MESSAGE value="add loop test" />
     <MESSAGE value="add docs" />
     <MESSAGE value="add helper file to hold directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="add helper file to hold directory" />
+    <MESSAGE value="doc change" />
+    <MESSAGE value="added download link to docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added download link to docs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1016,13 +1030,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6075949" vertical-offset="0" max-vertical-offset="5895">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="5895">
+          <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
     </entry>
