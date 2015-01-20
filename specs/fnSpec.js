@@ -1,13 +1,13 @@
 describe('fn and syncFN', function() {
 
     beforeEach(function() {
-        createTestWindow('win');
+        createTestWindow('fnTest');
     });
 
     describe('fn()', function() {
         it('should wait for an async function', function(done) {
             var test = false;
-            $win.async(done)
+            $fnTest.async(done)
                 .fn(myAsyncFn)
                 .syncFn(function() {
                     expect(test).toBe(true);
@@ -25,7 +25,7 @@ describe('fn and syncFN', function() {
         it('should run sync function in order', function(done) {
             var result = false;
 
-            $win.async(done)
+            $fnTest.async(done)
                 .syncFn(_.partial(testResult, false))
                 .syncFn(_.partial(setResult, true))
                 .syncFn(_.partial(testResult, true))
