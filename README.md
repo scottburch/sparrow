@@ -115,10 +115,11 @@ for more possibilities.__
 ##Documentation
 --------------
 
-*NOTE: If you are using the async monad, ignore the doneCB argument, this is handled for you.*
-
 * [create Test Window('name')](#createTestWindow)
 * [.async(doneCB)](#async)
+
+*NOTE: If you are using the async monad, ignore the doneCB argument on the following, this is handled for you.*
+
 * [.run()](#run)
 * [.open(url, doneCB)](#open)
 * [.show()](#show)
