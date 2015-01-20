@@ -40,16 +40,26 @@ or you can do things the easier way and use the sparrow async() monad.
     describe('block of tests', function() {
         it('should do something', function(done) {
             createTestWindow('win');
+
+             // open the page
             $win.open('http://example.com', function() {
             $win.click('#some-link');
+
+                // fill the form in the popup
                 $win.waitForSelector('#some-popup', function() {
                     $win.fill('#some-form', {name:'me', ...};
                     $win.click('#sumit-button');
+
+                    // Do something with the resulting page
                     $win.waitforText('new page loaded', function() {
                         $win.click('#another-link');
                         $win.waitWhileVisible('#some-modal', function() {
-                            expect($win.find('#result').html()).toBe('finished');
-                            done();
+                            myAsyncFunction(function() {
+
+                                // Test that we see 'finished'
+                                expect($win.find('#result').html()).toBe('finished');
+                                done();
+                            });
                         });
                     });
                 });
