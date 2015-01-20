@@ -78,6 +78,7 @@ or you can do things the easier way and use the sparrow async() monad.
                 .waitForText('new page loaded')
                 .click('#another-link')
                 .waitWhileVisible('#some-modal')
+                .fn(myAsyncFunction)
 
                 // Test that we see 'finished'
                 .syncFn(function() {
@@ -105,17 +106,17 @@ One is running the function directly and the other is using the async monad. (se
 ####createTestWindow('name')
 
 Opens a test window tab and creates $name variable in the test scope.
-
+```javascript
     it('should do something', function() {
         createTestWindow('aTestWindow');
         ... creates $aTestWindow
     });
-
+```
 
 ####.async(doneCB)
 
 Creates an async monad to make async functions easier
-
+```javascript
     it('should do something', function(done) {
         createTestWindow('win');
         $win.async(done)
@@ -123,37 +124,95 @@ Creates an async monad to make async functions easier
             .waitForText('something on new page')
             .run()
     });
+```
 
 ####.run()
 
 Starts a previously created async monad
 
+```javascript
     it('should do something', function(done) {
         createTestWindow('win');
         $win.async(done)
             // other instructions here
             .run();
     });
+```
 
 ####.open(url, doneCB)
 
 Opens a url in a window tab.
 
-    // Calling function directly
+```javascript
     it('should do something', function(done) {
         createTestWindow('win');
-        $win.open('http://google.com', function() {
-            // page is open
-            done();
-        });
+        $win.async(done)
+            .open('http://google.com'
+            // other instructions here
+            .run()
+    });
+```
+
+####.show()
+
+Show the tab for this window
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        createTestWindow('another');
+        $win.async(done)
+            .show() // This will show the $win window (tab)
+            .run()
+
+        $another.async(done)
+            .show()    // This will show the $another window (tab)
+            .run()
+    });
+```
+
+####.waitUntilTrue(testFn, doneCB)
+
+Wait until the test function returns true
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+         $win.async(done)
+            .click('#something')
+            .waitUntilTrue(somethingHappening)
     });
 
-    // Using with async monad
+    function somethingHappening() {
+        return $j('#xxxx').html() === 'ready'
+    }
+```
+
+####.waitForText(text, doneCB)
+
+Wait until the text is visible on the webpage
+
+```javascript
     it('should do something', function(done) {
-        createTestWindow('win')
+        createTestWindow('win');
         $win.async(done)
-            .open('http://google.com')
-            // other instructions here
-            .run();
+            .click('a')
+            .waitForText('some text on the page')
+            .run()
     });
+```
+
+####.waitForSelector(selector, doneCB)
+
+Wait until the selector is in the dom
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .waitForSelector('a#my-link')
+            .run()
+    });
+```
 
