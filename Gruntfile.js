@@ -19,7 +19,7 @@ module.exports = function(grunt) {
                     specs: 'specs/**/*Spec.js',
                     helpers: ['helpers/*Helper.js'],
                     vendor: sparrowFiles.vendor.headless.concat(['vendor/moment.js']),
-//                    host: 'https://homehello.com.au/wp-content/themes/hellohome/test-functional',
+//                    host: 'https://mysite.com',
                     '--ignore-ssl-errors': true,
                     '--web-security': false,
                     timeout: 120000,
