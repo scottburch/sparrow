@@ -14,7 +14,7 @@ Sparrow:
 
 ##Quick Start
 
-1) Download the latest sparrow from the dist directory
+1) Download the latest sparrow
 
 2) cd to installation directory
 
