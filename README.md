@@ -324,3 +324,39 @@ Close an open test window (tab)
             .run()
     });
 ```
+
+####.fn(someFunction)
+
+Call an async function
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .fn(myAsyncFunction)
+            .run()
+    });
+
+    function myAsyncFunction(done) {
+        // do something
+        done();
+    }
+```
+
+####.syncFn(someFunction)
+
+Call a function.  Currently this is the best way to add expects into your test code.
+
+```javascript
+    it('should do something', function(done) {
+        createTestWindow('win');
+        $win.async(done)
+            .click('a')
+            .syncFn(function() {
+                expect($win.find('#something').html()).toBe('my content');
+            })
+            .run()
+    });
+```
+
