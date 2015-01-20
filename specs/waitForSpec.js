@@ -15,7 +15,7 @@ describe('waitFor*, waitWhile* and waitUntil* tests', function () {
                 .run();
             setTimeout(function () {
                 test = true;
-            }, 1000);
+            }, 100);
         });
 
     });
@@ -49,7 +49,7 @@ describe('waitFor*, waitWhile* and waitUntil* tests', function () {
 
             setTimeout(function () {
                 $waitFor.find('#hidden').show();
-            }, 1000);
+            }, 100);
         });
     });
 
@@ -70,9 +70,9 @@ describe('waitFor*, waitWhile* and waitUntil* tests', function () {
         it('should wait a number of ms', function(done) {
             var start = new Date().getTime();
             $waitFor.async(done)
-                .wait(1000)
+                .wait(100)
                 .syncFn(function() {
-                    expect(new Date().getTime() - start > 900).toBe(true);
+                    expect(new Date().getTime() - start > 70).toBe(true);
                 })
                 .run();
         });
