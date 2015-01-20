@@ -115,6 +115,8 @@ for more possibilities.__
 ##Documentation
 --------------
 
+*NOTE: If you are using the async monad, ignore the doneCB argument, this is handled for you.*
+
 * [create Test Window('name')](#createTestWindow)
 * [.async(doneCB)](#async)
 * [.run()](#run)
