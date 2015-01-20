@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="test-pages.css" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script>
+            $j = jQuery.noConflict();
+        </script>
+    </head>
+    <body>
+        <div id="hidden" style="display:none">This is hidden</div>
+        <button type="button">Show Element</button>
+        <script>
+            $j('button').click(function() {
+                setTimeout(function() {
+                    $j('body').append('<div id="waitForSelectorElement">Here it is</div>')
+                },1000);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "home-hello-tests",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.8.1",
+    "jquery": "^2.1.3",
+    "lodash": "^2.4.1"
+  }
+}
