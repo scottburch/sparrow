@@ -28,6 +28,10 @@ __(NOTE: FF seems to allow running from the local filesystem.  Chrome requires r
 
 6) Look at the files in */specs* to see some of the possibilities
 
+##Running tests in headless mode
+
+To run tests in headless mode.  type __'grunt'__ or __'grunt jasmine:headless'__
+
 
 ##Basics
 
