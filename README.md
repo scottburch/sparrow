@@ -113,9 +113,27 @@ for more possibilities.__
 
 
 ##Documentation
+--------------
 
+* [create Test Window('name')](#createTestWindow)
+* [.async(doneCB)](#async)
+* [.run()](#run)
+* [.open(url, doneCB)](#open)
+* [.show()](#show)
+* [.waitUntilTrue(testFn, doneCB)](#waitUntilTrue)
+* [.waitForText(text, doneCB)](#waitForText)
+* [.waitForSelector(selector, doneCB)](#waitForSelector)
+* [.waitUntilVisible(selector, doneCB)](#waitUntilVisible)
+* [.waitWhileVisible(selector, doneCB)](#waitWhileVisible)
+* [.wait(ms, doneCB)](#wait)
+* [.click(selector)](#click)
+* [.log(message)](#log)
+* [.fill(selector, formData)](#fill)
+* [.close()](#close)
+* [.fn(someFunction)](#fn)
+* [.syncFn(someFunction)](#syncFn)
 
-####createTestWindow('name')
+####<a name="createTestWindow">createTestWindow('name')
 
 Opens a test window tab and creates *$name* variable in the test scope.
 ```javascript
@@ -125,7 +143,7 @@ Opens a test window tab and creates *$name* variable in the test scope.
     });
 ```
 
-####.async(doneCB)
+####<a name="async">.async(doneCB)
 
 Creates an async monad to make async functions easier
 ```javascript
@@ -138,7 +156,7 @@ Creates an async monad to make async functions easier
     });
 ```
 
-####.run()
+####<a name="run">.run()
 
 Starts a previously created async monad
 
@@ -151,7 +169,7 @@ Starts a previously created async monad
     });
 ```
 
-####.open(url, doneCB)
+####<a name="open">.open(url, doneCB)
 
 Opens a url in a window tab.
 
@@ -165,7 +183,7 @@ Opens a url in a window tab.
     });
 ```
 
-####.show()
+####<a name="show">.show()
 
 Show the tab for this window
 
@@ -183,7 +201,7 @@ Show the tab for this window
     });
 ```
 
-####.waitUntilTrue(testFn, doneCB)
+####<a name="waitUntilTrue">.waitUntilTrue(testFn, doneCB)
 
 Wait until the test function returns true
 
@@ -200,7 +218,7 @@ Wait until the test function returns true
     }
 ```
 
-####.waitForText(text, doneCB)
+####<a name="waitForText">.waitForText(text, doneCB)
 
 Wait until the text is visible on the webpage
 
@@ -214,7 +232,7 @@ Wait until the text is visible on the webpage
     });
 ```
 
-####.waitForSelector(selector, doneCB)
+####<a name="waitForSelector">.waitForSelector(selector, doneCB)
 
 Wait until the selected element is in the dom
 
@@ -228,7 +246,7 @@ Wait until the selected element is in the dom
     });
 ```
 
-####.waitUntilVisible(selector, doneCB)
+####<a name="waitUntilVisible">.waitUntilVisible(selector, doneCB)
 
 Wait until the selected element is visible
 
@@ -242,7 +260,7 @@ Wait until the selected element is visible
     });
 ```
 
-####.waitWhileVisible(selector, doneCB)
+####<a name="waitWhileVisible">.waitWhileVisible(selector, doneCB)
 
 Wait while the selected element is visible
 
@@ -256,7 +274,7 @@ Wait while the selected element is visible
     });
 ```
 
-####.wait(ms, doneCB)
+####<a name="wait">.wait(ms, doneCB)
 
 Wait for some period of milliseconds
 
@@ -271,7 +289,7 @@ Wait for some period of milliseconds
     });
 ```
 
-####.click(selector)
+####<a name="click">.click(selector)
 
 Click on some selected element
 
@@ -286,7 +304,7 @@ Click on some selected element
     });
 ```
 
-####.log(message)
+####<a name="log">.log(message)
 
 Send a log message to the console.
 
@@ -300,7 +318,7 @@ Send a log message to the console.
     });
 ```
 
-####.fill(selector, formData)
+####<a name="fill">.fill(selector, formData)
 
 Fill in the selected form
 
@@ -314,7 +332,7 @@ Fill in the selected form
     });
 ```
 
-####.close()
+####<a name="close">.close()
 
 Close an open test window (tab)
 
@@ -329,7 +347,7 @@ Close an open test window (tab)
     });
 ```
 
-####.fn(someFunction)
+####<a name="fn">.fn(someFunction)
 
 Call an async function
 
@@ -348,7 +366,7 @@ Call an async function
     }
 ```
 
-####.syncFn(someFunction)
+####<a name="syncFn">.syncFn(someFunction)
 
 Call a function.  Currently this is the best way to add expects into your test code.
 
