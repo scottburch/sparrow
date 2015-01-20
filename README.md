@@ -18,7 +18,7 @@ Sparrow:
 
 2) cd to installation directory
 
-3) type __'npm install'__ (you must have npm/node installed)
+3) type __'npm install'__ (requires [node](http://nodejs.org/))
 
 4) type __'grunt jasmine:headed:build'__ to create specRunner.html (requires [grunt](http://gruntjs.com/))
 
