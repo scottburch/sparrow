@@ -33,6 +33,10 @@ __(NOTE: FF seems to allow running from the local filesystem.  Chrome requires r
 To run a single test or a group of tests, simply add *?spec=some%20it%20or%20description* to the end of the url
 the same way you would running Jamsine directly.
 
+example:
+
+to run 'should do something' use __?spec=should%20do%20something__ at the end of the url.
+
 ##Running tests in headless mode
 
 To run tests in headless mode.  type __'grunt'__ or __'grunt jasmine:headless'__
