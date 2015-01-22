@@ -122,6 +122,14 @@ or you can do things the easier way and use the sparrow async() monad.
 __Sparrow is based on jasmine so tests are written in the same style.  See [jasmine docs](http://jasmine.github.io/2.1/introduction.html)
 for more possibilities.__
 
+##Using with Meteor
+
+Unpack sparrow someplace in the /public directory.  I put it in /public/sparrow.  Sparrow tests will then be available
+ at http://localhost:3000/sparrow/runner.html.
+
+*NOTE: I have found that I must clear the cache in my browser to get updates after changing specs.*
+
+
 
 
 ##Documentation
