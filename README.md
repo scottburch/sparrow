@@ -155,6 +155,7 @@ Unpack sparrow someplace in the /public directory.  I put it in /public/sparrow.
 * [.close()](#close)
 * [.fn(someFunction)](#fn)
 * [.syncFn(someFunction)](#syncFn)
+* [.extend(obj)](#extend)
 
 ####<a name="createTestWindow">createTestWindow('name')
 
@@ -405,3 +406,35 @@ Call a function.  Currently this is the best way to add expects into your test c
     });
 ```
 
+####<a name="extend">.extend(obj)
+
+Extend a windowVar with a new function.
+
+```javascript
+describe('extending windowVars', function() {
+
+    it('should accept any function', function(done) {
+        createTestWindow('extend');
+
+        $extend.extend({
+            write: function(selector, content) {
+                $extend.find(selector).append(content);
+            },
+            waitForTesting: function(done) {
+                $extend.waitForText('testing', done);
+            }
+        });
+
+        $extend.async(done)
+            .waitForTesting()
+            .syncFn(function() {
+                expect($extend.find('body').html()).toBe('testing');
+            })
+            .run();
+
+        setTimeout(function() {
+            $extend.write('body', 'testing');
+        },500);
+    });
+});
+```

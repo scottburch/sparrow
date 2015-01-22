@@ -67,12 +67,17 @@
             pageVar = frame.contents();
             pageVar.$window = frame.get(0).contentDocument.defaultView;
 
-            addPageHelpers();
-            addFunctional();
-            addAsyncMonad();
 
             testsFrame && (getTestsCtx()['$' + id] = pageVar);
             window['$' + id] = pageVar; // for headless mode
+
+
+            pageVar.extend = function(obj) {
+                _.extend(pageVar, obj)
+                addFunctional();
+                addAsyncMonad();
+            }
+            pageVar.extend(pageHelpers());
 
             function addAsyncMonad() {
                 pageVar.async = function (done) {
@@ -132,7 +137,7 @@
             }
         }
 
-        function addPageHelpers() {
+        function pageHelpers() {
             function whileNotTrue(test, done, timeoutMsg) {
                 var start = new Date().getTime();
                 loop();
@@ -154,7 +159,7 @@
                 }
             }
 
-            _.extend(pageVar, {
+            return {
                 waitForText: function waitForText(text, done) {
                     whileNotTrue(function() {
                         return pageVar.find(':contains(' + text + ')').is(':visible');
@@ -253,7 +258,7 @@
                     window.w2ui && w2ui.layout.get('main').tabs.remove(id);
                     frame.remove();
                 }
-            });
+            };
         }
     }
 
@@ -277,5 +282,10 @@
             sparrow: global.sparrow
 
         });
+    }
+
+
+    function pageHelpers() {
+
     }
 }(this));
