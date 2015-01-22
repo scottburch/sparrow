@@ -408,7 +408,9 @@ Call a function.  Currently this is the best way to add expects into your test c
 
 ####<a name="extend">.extend(obj)
 
-Extend a windowVar with a new function.
+Extend a window variable with new functions.
+
+*NOTE: To add an async function, the final argument must be named 'done'*
 
 ```javascript
 describe('extending windowVars', function() {
