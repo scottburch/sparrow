@@ -39,7 +39,7 @@ to run 'should do something' use __?spec=should%20do%20something__ at the end of
 
 ##Running tests in headless mode
 
-To run tests in headless mode.  type __'grunt'__ or __'grunt jasmine:headless'__
+To run tests in headless/CI mode.  type __'grunt'__ or __'grunt jasmine:headless'__
 
 If you need to run the tests from a server with dynamic content, simply add the host address in Gruntfile.js.
 It is best to run the tests from the source directory the server is pointed to or a symlink.
