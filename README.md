@@ -47,7 +47,7 @@ It is best to run the tests from the source directory the server is pointed to o
 
 ##Basics
 
-There are two ways to use the sparrow functions.  You can call them directly and provide a callback for the async functions,
+__There are two ways to use the sparrow functions.__  You can call them directly and provide a callback for the async functions,
 or you can do things the easier way and use the sparrow async() monad.
 
 #### Callback example
