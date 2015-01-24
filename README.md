@@ -45,6 +45,13 @@ If you need to run the tests from a server with dynamic content, simply add the 
 It is best to run the tests from the source directory the server is pointed to or a symlink.
 
 
+##Sparrow options
+
+####sparrow.WAIT_TIME
+The time to wait for the waitFor*, waitUntil*, waitWhile*
+
+This can be set in a helper to make it a global setting for all tests
+
 ##Basics
 
 __There are two ways to use the sparrow functions.__  You can call them directly and __provide a callback__ for the async functions,

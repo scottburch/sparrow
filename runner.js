@@ -76,7 +76,7 @@
                 _.extend(pageVar, obj)
                 addFunctional();
                 addAsyncMonad();
-            }
+            };
             pageVar.extend(pageHelpers());
 
             function addAsyncMonad() {
