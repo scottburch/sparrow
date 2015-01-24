@@ -283,9 +283,4 @@
 
         });
     }
-
-
-    function pageHelpers() {
-
-    }
 }(this));
