@@ -1,6 +1,6 @@
 (function (global) {
     "use strict";
-    var testWindows = {}, currentDone, extendPageHelpers = {};
+    var testWindows = {}, currentDone, extendWinHelpers = {};
 
     var testsFrame = $j('iframe#tests');
     testsFrame = testsFrame.length ? testsFrame : false;
@@ -8,7 +8,7 @@
     global.sparrow = {
         WAIT_TIME: 20000,
         extend: function (obj) {
-            _.extend(extendPageHelpers, obj);
+            _.extend(extendWinHelpers, obj);
         }
     };
 
@@ -19,10 +19,10 @@
         return testsFrame ? testsFrame.get(0).contentDocument.defaultView : window;
     }
 
-    function TestPage(id) {
+    function TestWin(id) {
         var frame, currentOpenDoneCB, winVar;
 
-        addTestPage();
+        addTestWin();
         show();
 
         return {
@@ -31,15 +31,15 @@
 
         function show() {
             setTimeout(function () {
-                _.each(testWindows, function (page) {
-                    page.frame.css('left', '-9999');
+                _.each(testWindows, function (win) {
+                    win.frame.css('left', '-9999');
                 });
                 frame.css('left', '0');
                 window.w2ui && w2ui.layout.get('main').tabs.select(id); // activate the new tab
             });
         }
 
-        function addTestPage() {
+        function addTestWin() {
             if (window.w2ui) {
                 var tabs = w2ui.layout.get('main').tabs;
                 tabs.add({
@@ -73,16 +73,16 @@
             testsFrame && (getTestsCtx()['$' + id] = winVar);
             window['$' + id] = winVar; // for headless mode
 
-            addPageHelpers()
+            addWinHelpers()
 
 
-            function addPageHelpers() {
-                var extendHelpers = _.reduce(extendPageHelpers, function(memo, fn, name) {
+            function addWinHelpers() {
+                var extendHelpers = _.reduce(extendWinHelpers, function(memo, fn, name) {
                     memo[name] = _.partial(fn, winVar);
                     memo[name].hasDone = hasDone(fn);
                     return memo;
                 }, {});
-                _.extend(winVar, extendHelpers, pageHelpers());
+                _.extend(winVar, extendHelpers, winHelpers());
                 addFunctional();
                 addAsyncMonad();
             }
@@ -152,7 +152,7 @@
             }
         }
 
-        function pageHelpers() {
+        function winHelpers() {
             function whileNotTrue(test, done, timeoutMsg) {
                 var start = new Date().getTime();
                 loop();
@@ -289,9 +289,9 @@
     function addTestHelpers() {
         var context = testsFrame ? testsFrame.get(0) : window;
         _.extend(context, {
-            createTestWindow: function (pageId) {
-                if (!testWindows[pageId]) {
-                    testWindows[pageId] = TestPage(pageId);
+            createTestWindow: function (winId) {
+                if (!testWindows[winId]) {
+                    testWindows[winId] = TestWin(winId);
                 }
             },
             sparrow: global.sparrow

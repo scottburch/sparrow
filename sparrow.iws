@@ -45,8 +45,8 @@
       <file leaf-file-name="runner.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38256657" vertical-offset="4192" max-vertical-offset="4605">
-              <caret line="290" column="23" selection-start-line="290" selection-start-column="23" selection-end-line="290" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.33171913" vertical-offset="613" max-vertical-offset="4605">
+              <caret line="50" column="61" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -672,7 +672,7 @@
       <workItem from="1421802843670" duration="186000" />
       <workItem from="1421807101676" duration="6247000" />
       <workItem from="1421941504833" duration="1581000" />
-      <workItem from="1421943595816" duration="15860000" />
+      <workItem from="1421943595816" duration="16058000" />
     </task>
     <task id="LOCAL-00001" summary="nameing rework">
       <created>1421721158749</created>
@@ -932,11 +932,17 @@
       <option name="project" value="LOCAL" />
       <updated>1422215027975</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="changed pageVar to winVar">
+      <created>1422215297442</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1422215297442</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53668000" />
+    <option name="totallyTimeSpent" value="53866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="36" width="1171" height="845" extended-state="0" />
@@ -987,7 +993,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="waitFor spec update" />
     <MESSAGE value="adding waitFor specs" />
     <MESSAGE value="fill spec" />
     <MESSAGE value="adding readme" />
@@ -1012,7 +1017,8 @@
     <MESSAGE value="Fixed extend and made it global" />
     <MESSAGE value="doc fix" />
     <MESSAGE value="performance improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="performance improvement" />
+    <MESSAGE value="changed pageVar to winVar" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed pageVar to winVar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1407,8 +1413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38256657" vertical-offset="4192" max-vertical-offset="4605">
-          <caret line="290" column="23" selection-start-line="290" selection-start-column="23" selection-end-line="290" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.33171913" vertical-offset="613" max-vertical-offset="4605">
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="61" />
           <folding />
         </state>
       </provider>
