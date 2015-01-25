@@ -413,7 +413,7 @@ Call a function.  Currently this is the best way to add expects into your test c
     });
 ```
 
-####<a name="extend">.extend(obj)
+####<a name="extend">sparrow.extend(obj)
 
 Add functions to sparrow. The first argument will be the test window variable.
 For example, if you created a test window called "myWin", then called __$myWin.write()__.  winVar would be $myWin.

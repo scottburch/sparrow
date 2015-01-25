@@ -32,8 +32,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4538835" vertical-offset="6053" max-vertical-offset="6840">
-              <caret line="416" column="73" selection-start-line="416" selection-start-column="73" selection-end-line="416" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.38106796" vertical-offset="6068" max-vertical-offset="6570">
+              <caret line="415" column="28" selection-start-line="415" selection-start-column="28" selection-end-line="415" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -45,8 +45,8 @@
       <file leaf-file-name="runner.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="4380">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.8214285" vertical-offset="1108" max-vertical-offset="4560">
+              <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
       <file leaf-file-name="extendSpec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/specs/extendSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="465">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+              <caret line="10" column="11" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -96,10 +96,10 @@
         <option value="$PROJECT_DIR$/specs/waitForSpec.js" />
         <option value="$PROJECT_DIR$/globals.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/runner.js" />
         <option value="$PROJECT_DIR$/helpers/exampleHelper.js" />
         <option value="$PROJECT_DIR$/helpers/configHelper.js" />
         <option value="$PROJECT_DIR$/specs/extendSpec.js" />
+        <option value="$PROJECT_DIR$/runner.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -112,8 +112,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="28" />
+    <option name="x" value="7" />
+    <option name="y" value="29" />
     <option name="width" value="1171" />
     <option name="height" value="845" />
   </component>
@@ -672,7 +672,7 @@
       <workItem from="1421802843670" duration="186000" />
       <workItem from="1421807101676" duration="6247000" />
       <workItem from="1421941504833" duration="1581000" />
-      <workItem from="1421943595816" duration="7376000" />
+      <workItem from="1421943595816" duration="14900000" />
     </task>
     <task id="LOCAL-00001" summary="nameing rework">
       <created>1421721158749</created>
@@ -908,14 +908,26 @@
       <option name="project" value="LOCAL" />
       <updated>1422119461939</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update to docs">
+      <created>1422171724994</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1422171724994</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Fixed extend and made it global">
+      <created>1422214007608</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1422214007608</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45184000" />
+    <option name="totallyTimeSpent" value="52708000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="28" width="1171" height="845" extended-state="0" />
+    <frame x="7" y="29" width="1171" height="845" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -985,13 +997,20 @@
     <MESSAGE value="updatd docs" />
     <MESSAGE value="removed unused code" />
     <MESSAGE value="added configHelper" />
-    <option name="LAST_COMMIT_MESSAGE" value="added configHelper" />
+    <MESSAGE value="update to docs" />
+    <MESSAGE value="Fixed extend and made it global" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed extend and made it global" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="19" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JavascriptDebugType">
+        <watch expression="arguments" language="JavaScript" />
+        <watch expression="args" language="JavaScript" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1354,26 +1373,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/extendSpec.js">
+    <entry file="file://$PROJECT_DIR$/runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="465">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.8214285" vertical-offset="1108" max-vertical-offset="4560">
+          <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner.js">
+    <entry file="file://$PROJECT_DIR$/specs/extendSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="4380">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="10" column="11" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4538835" vertical-offset="6053" max-vertical-offset="6840">
-          <caret line="416" column="73" selection-start-line="416" selection-start-column="73" selection-end-line="416" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.38106796" vertical-offset="6068" max-vertical-offset="6570">
+          <caret line="415" column="28" selection-start-line="415" selection-start-column="28" selection-end-line="415" selection-end-column="28" />
           <folding />
         </state>
       </provider>
