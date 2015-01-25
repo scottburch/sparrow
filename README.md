@@ -414,6 +414,7 @@ Call a function.  Currently this is the best way to add expects into your test c
 ```
 
 ####<a name="extend">.extend(obj)
+__NOTE: there is a current issue with .extend(), it will be resolved soon__
 
 Extend a window variable with new functions.
 
