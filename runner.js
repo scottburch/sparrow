@@ -20,7 +20,7 @@
     }
 
     function TestPage(id) {
-        var frame, currentOpenDoneCB, pageVar;
+        var frame, currentOpenDoneCB, winVar;
 
         addTestPage();
         show();
@@ -50,9 +50,9 @@
             }
             $j('#pagePanel').append('<iframe class="test-page" id="' + id + '"></iframe>');
             frame = $j('iframe#' + id);
-            createPageVariable();
+            createwinVariable();
             frame.bind('load', function () {
-                createPageVariable()
+                createwinVariable()
                 var done = currentOpenDoneCB;
                 currentOpenDoneCB = undefined;
                 done && done();
@@ -60,35 +60,35 @@
         }
 
 
-        function createPageVariable() {
+        function createwinVariable() {
             var contents = frame.contents();
-//            pageVar = {
+//            winVar = {
 //                find: contents.find.bind(contents),
 //                get: contents.get.bind(contents)
 //            };
-            pageVar = frame.contents();
-            pageVar.$window = frame.get(0).contentDocument.defaultView;
+            winVar = frame.contents();
+            winVar.$window = frame.get(0).contentDocument.defaultView;
 
 
-            testsFrame && (getTestsCtx()['$' + id] = pageVar);
-            window['$' + id] = pageVar; // for headless mode
+            testsFrame && (getTestsCtx()['$' + id] = winVar);
+            window['$' + id] = winVar; // for headless mode
 
             addPageHelpers()
 
 
             function addPageHelpers() {
                 var extendHelpers = _.reduce(extendPageHelpers, function(memo, fn, name) {
-                    memo[name] = _.partial(fn, pageVar);
+                    memo[name] = _.partial(fn, winVar);
                     memo[name].hasDone = hasDone(fn);
                     return memo;
                 }, {});
-                _.extend(pageVar, extendHelpers, pageHelpers());
+                _.extend(winVar, extendHelpers, pageHelpers());
                 addFunctional();
                 addAsyncMonad();
             }
 
             function addAsyncMonad() {
-                pageVar.async = function (done) {
+                winVar.async = function (done) {
                     var fnList = [];
                     var api = {
                         run: function () {
@@ -110,12 +110,12 @@
                             return api;
                         }
                     };
-                    // Add a wrapper around methods in pageVar
-                    _.each(_.functions(pageVar.fn), function (fnName) {
-                        var fn = pageVar.fn[fnName];
+                    // Add a wrapper around methods in winVar
+                    _.each(_.functions(winVar.fn), function (fnName) {
+                        var fn = winVar.fn[fnName];
                         api[fnName] = function () {
                             var args = _.toArray(arguments);
-                            api.fn(fn.apply(pageVar.fn, arguments));
+                            api.fn(fn.apply(winVar.fn, arguments));
                             return api;
                         }
                     });
@@ -133,16 +133,16 @@
             }
 
             function addFunctional() {
-                pageVar.fn = {};
-                _.each(_.functions(pageVar), function (fnName) {
-                    var origFn = pageVar[fnName];
-                    pageVar.fn[fnName] = function () {
+                winVar.fn = {};
+                _.each(_.functions(winVar), function (fnName) {
+                    var origFn = winVar[fnName];
+                    winVar.fn[fnName] = function () {
                         var args = _.toArray(arguments);
                         return function (done) {
                             if (hasDone(origFn)) {
-                                return origFn.apply(pageVar, args.concat(done));
+                                return origFn.apply(winVar, args.concat(done));
                             } else {
-                                var ret = origFn.apply(pageVar, args);
+                                var ret = origFn.apply(winVar, args);
                                 done();
                                 return ret;
                             }
@@ -161,7 +161,7 @@
                         if (new Date().getTime() - start > sparrow.WAIT_TIME) {
                             var ctx = testsFrame ? getTestsCtx() : window;
                             ctx.fail('TIMEOUT - ' + timeoutMsg);
-                            testsFrame || pageVar.capture('body', timeoutMsg.replace(' ', '_') + '.html');
+                            testsFrame || winVar.capture('body', timeoutMsg.replace(' ', '_') + '.html');
                             if (currentDone) {
                                 var tempDone = currentDone;
                                 currentDone = undefined;
@@ -177,22 +177,22 @@
             return {
                 waitForText: function waitForText(text, done) {
                     whileNotTrue(function () {
-                        return pageVar.find(':contains(' + text + ')').is(':visible');
+                        return winVar.find(':contains(' + text + ')').is(':visible');
                     }, done, 'waitForText: ' + text);
                 },
                 waitForSelector: function waitForSelector(selector, done) {
                     whileNotTrue(function () {
-                        return pageVar.find(selector).length
+                        return winVar.find(selector).length
                     }, done, 'waitForSelector: ' + selector);
                 },
                 waitUntilVisible: function waitUntilVisible(selector, done) {
                     whileNotTrue(function () {
-                        return pageVar.find(selector).is(':visible')
+                        return winVar.find(selector).is(':visible')
                     }, done, 'waitUntilVisible: ' + selector);
                 },
                 waitWhileVisible: function waitWhileVisible(selector, done) {
                     whileNotTrue(function () {
-                        return !pageVar.find(selector).is(':visible');
+                        return !winVar.find(selector).is(':visible');
                     }, done, 'waitWhileVisible: ' + selector);
                 },
                 waitUntilTrue: function (test, done) {
@@ -208,8 +208,8 @@
 
                     function click() {
                         try {
-                            var elem = pageVar.find(selector).get(0);
-                            var evt = pageVar.get(0).createEvent("MouseEvents");
+                            var elem = winVar.find(selector).get(0);
+                            var evt = winVar.get(0).createEvent("MouseEvents");
                             var center_x = 1, center_y = 1;
                             try {
                                 var pos = elem.getBoundingClientRect();
@@ -217,7 +217,7 @@
                                 center_y = Math.floor((pos.top + pos.bottom) / 2);
                             } catch (e) {
                             }
-                            evt.initMouseEvent('click', true, true, pageVar.$window, 1, 1, 1, center_x, center_y, false, false, false, false, 0, elem);
+                            evt.initMouseEvent('click', true, true, winVar.$window, 1, 1, 1, center_x, center_y, false, false, false, false, 0, elem);
                             // dispatchEvent return value is false if at least one of the event
                             // handlers which handled this event called preventDefault;
                             // so we cannot returns this results as it cannot accurately informs on the status
@@ -236,12 +236,12 @@
                 },
                 dump: function (selector, filename) {
                     selector = selector || 'html';
-                    var html = pageVar(selector).html();
+                    var html = winVar(selector).html();
                     filename ? console.log(html) : alert(JSON.stringify(['writeFile', filename, html]));
                 },
                 capture: function (selector, filename) {
                     filename = filename || 'capture.png';
-                    var el = pageVar.find(selector).get(0);
+                    var el = winVar.find(selector).get(0);
                     html2canvas(el, {
                         onrendered: function (canvas) {
                             var s = '<img src="' + canvas.toDataURL('image/png') + '">'
@@ -251,9 +251,9 @@
                     });
                 },
                 fill: function (selector, object) {
-                    var form = pageVar.find(selector);
+                    var form = winVar.find(selector);
                     _.each(object, function (value, name) {
-                        var field = pageVar.find('[name="' + name + '"]', form);
+                        var field = winVar.find('[name="' + name + '"]', form);
                         field.focus();
                         field.val(value);
                     });

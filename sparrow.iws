@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1520d09-aeaa-4b55-82fc-d8a1529b2d0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runner.js" afterPath="$PROJECT_DIR$/runner.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparrow.iws" afterPath="$PROJECT_DIR$/sparrow.iws" />
     </list>
     <ignored path="sparrow.iws" />
@@ -29,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38106796" vertical-offset="6068" max-vertical-offset="6570">
+            <state vertical-scroll-proportion="-5.413793" vertical-offset="6068" max-vertical-offset="6570">
               <caret line="415" column="28" selection-start-line="415" selection-start-column="28" selection-end-line="415" selection-end-column="28" />
               <folding />
             </state>
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="runner.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="runner.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8214285" vertical-offset="1108" max-vertical-offset="4560">
-              <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.38256657" vertical-offset="4192" max-vertical-offset="4605">
+              <caret line="290" column="23" selection-start-line="290" selection-start-column="23" selection-end-line="290" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -99,8 +99,8 @@
         <option value="$PROJECT_DIR$/helpers/exampleHelper.js" />
         <option value="$PROJECT_DIR$/helpers/configHelper.js" />
         <option value="$PROJECT_DIR$/specs/extendSpec.js" />
-        <option value="$PROJECT_DIR$/runner.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/runner.js" />
       </list>
     </option>
   </component>
@@ -112,8 +112,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="29" />
+    <option name="x" value="44" />
+    <option name="y" value="36" />
     <option name="width" value="1171" />
     <option name="height" value="845" />
   </component>
@@ -672,7 +672,7 @@
       <workItem from="1421802843670" duration="186000" />
       <workItem from="1421807101676" duration="6247000" />
       <workItem from="1421941504833" duration="1581000" />
-      <workItem from="1421943595816" duration="14900000" />
+      <workItem from="1421943595816" duration="15860000" />
     </task>
     <task id="LOCAL-00001" summary="nameing rework">
       <created>1421721158749</created>
@@ -920,14 +920,26 @@
       <option name="project" value="LOCAL" />
       <updated>1422214007608</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="doc fix">
+      <created>1422214073626</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1422214073626</updated>
+    </task>
+    <task id="LOCAL-00043" summary="performance improvement">
+      <created>1422215027975</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1422215027975</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52708000" />
+    <option name="totallyTimeSpent" value="53668000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="29" width="1171" height="845" extended-state="0" />
+    <frame x="44" y="36" width="1171" height="845" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -975,7 +987,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="nameing rework" />
     <MESSAGE value="waitFor spec update" />
     <MESSAGE value="adding waitFor specs" />
     <MESSAGE value="fill spec" />
@@ -999,7 +1010,9 @@
     <MESSAGE value="added configHelper" />
     <MESSAGE value="update to docs" />
     <MESSAGE value="Fixed extend and made it global" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed extend and made it global" />
+    <MESSAGE value="doc fix" />
+    <MESSAGE value="performance improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="performance improvement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1373,14 +1386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8214285" vertical-offset="1108" max-vertical-offset="4560">
-          <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/specs/extendSpec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
@@ -1391,13 +1396,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38106796" vertical-offset="6068" max-vertical-offset="6570">
+        <state vertical-scroll-proportion="-5.413793" vertical-offset="6068" max-vertical-offset="6570">
           <caret line="415" column="28" selection-start-line="415" selection-start-column="28" selection-end-line="415" selection-end-column="28" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38256657" vertical-offset="4192" max-vertical-offset="4605">
+          <caret line="290" column="23" selection-start-line="290" selection-start-column="23" selection-end-line="290" selection-end-column="23" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
