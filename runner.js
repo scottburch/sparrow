@@ -125,6 +125,9 @@
 
 
             function hasDone(fn) {
+                if(fn.hasDone !== undefined) {
+                    return fn.hasDone;
+                }
                 var fnSig = fn.toString().split('\n')[0].replace(/[^\(]*\(([^\)]*).*/, '$1').replace(/ /g, '').split(',');
                 return   fn.hasDone = _.last(fnSig) === 'done';
             }
@@ -136,7 +139,7 @@
                     pageVar.fn[fnName] = function () {
                         var args = _.toArray(arguments);
                         return function (done) {
-                            if (origFn.hasDone || hasDone(origFn)) {
+                            if (hasDone(origFn)) {
                                 return origFn.apply(pageVar, args.concat(done));
                             } else {
                                 var ret = origFn.apply(pageVar, args);
