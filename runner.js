@@ -1,17 +1,19 @@
 (function (global) {
     "use strict";
-    var testWindows = {}, currentDone;
+    var testWindows = {}, currentDone, extendPageHelpers = {};
 
     var testsFrame = $j('iframe#tests');
     testsFrame = testsFrame.length ? testsFrame : false;
 
     global.sparrow = {
-        WAIT_TIME: 20000
+        WAIT_TIME: 20000,
+        extend: function (obj) {
+            _.extend(extendPageHelpers, obj);
+        }
     };
 
     addTestHelpers();
     testsFrame && startTests();
-
 
     function getTestsCtx() {
         return testsFrame ? testsFrame.get(0).contentDocument.defaultView : window;
@@ -71,13 +73,19 @@
             testsFrame && (getTestsCtx()['$' + id] = pageVar);
             window['$' + id] = pageVar; // for headless mode
 
+            addPageHelpers()
 
-            pageVar.extend = function(obj) {
-                _.extend(pageVar, obj)
+
+            function addPageHelpers() {
+                var extendHelpers = _.reduce(extendPageHelpers, function(memo, fn, name) {
+                    memo[name] = _.partial(fn, pageVar);
+                    memo[name].hasDone = hasDone(fn);
+                    return memo;
+                }, {});
+                _.extend(pageVar, extendHelpers, pageHelpers());
                 addFunctional();
                 addAsyncMonad();
-            };
-            pageVar.extend(pageHelpers());
+            }
 
             function addAsyncMonad() {
                 pageVar.async = function (done) {
@@ -85,7 +93,7 @@
                     var api = {
                         run: function () {
                             currentDone = done;
-                            async.series(fnList, function() {
+                            async.series(fnList, function () {
                                 currentDone = undefined;
                                 done();
                             });
@@ -94,8 +102,8 @@
                             fnList.push(fn);
                             return api;
                         },
-                        syncFn: function(fn) {
-                            fnList.push(function(done) {
+                        syncFn: function (fn) {
+                            fnList.push(function (done) {
                                 fn();
                                 done();
                             });
@@ -116,18 +124,22 @@
             }
 
 
+            function hasDone(fn) {
+                var fnSig = fn.toString().split('\n')[0].replace(/[^\(]*\(([^\)]*).*/, '$1').replace(/ /g, '').split(',');
+                return   fn.hasDone = _.last(fnSig) === 'done';
+            }
+
             function addFunctional() {
                 pageVar.fn = {};
                 _.each(_.functions(pageVar), function (fnName) {
-                    var fnSig = pageVar[fnName].toString().split('\n')[0].replace(/[^\(]*\(([^\)]*).*/, '$1').replace(/ /g, '').split(',');
-                    var hasDone = _.last(fnSig) === 'done';
+                    var origFn = pageVar[fnName];
                     pageVar.fn[fnName] = function () {
                         var args = _.toArray(arguments);
                         return function (done) {
-                            if (hasDone) {
-                                return pageVar[fnName].apply(pageVar, args.concat(done));
+                            if (origFn.hasDone || hasDone(origFn)) {
+                                return origFn.apply(pageVar, args.concat(done));
                             } else {
-                                var ret = pageVar[fnName].apply(pageVar, args);
+                                var ret = origFn.apply(pageVar, args);
                                 done();
                                 return ret;
                             }
@@ -142,12 +154,12 @@
                 var start = new Date().getTime();
                 loop();
                 function loop() {
-                    test() ? done() : setTimeout(function() {
-                        if(new Date().getTime() - start > sparrow.WAIT_TIME) {
+                    test() ? done() : setTimeout(function () {
+                        if (new Date().getTime() - start > sparrow.WAIT_TIME) {
                             var ctx = testsFrame ? getTestsCtx() : window;
-                            ctx.fail('TIMEOUT - '+timeoutMsg);
-                            testsFrame || pageVar.capture('body', timeoutMsg.replace(' ', '_')+ '.html');
-                            if(currentDone) {
+                            ctx.fail('TIMEOUT - ' + timeoutMsg);
+                            testsFrame || pageVar.capture('body', timeoutMsg.replace(' ', '_') + '.html');
+                            if (currentDone) {
                                 var tempDone = currentDone;
                                 currentDone = undefined;
                                 tempDone();
@@ -155,37 +167,37 @@
                         } else {
                             loop();
                         }
-                    },100);
+                    }, 100);
                 }
             }
 
             return {
                 waitForText: function waitForText(text, done) {
-                    whileNotTrue(function() {
+                    whileNotTrue(function () {
                         return pageVar.find(':contains(' + text + ')').is(':visible');
-                    },done, 'waitForText: '+text);
+                    }, done, 'waitForText: ' + text);
                 },
                 waitForSelector: function waitForSelector(selector, done) {
-                    whileNotTrue(function() {
+                    whileNotTrue(function () {
                         return pageVar.find(selector).length
-                    }, done, 'waitForSelector: '+selector);
+                    }, done, 'waitForSelector: ' + selector);
                 },
                 waitUntilVisible: function waitUntilVisible(selector, done) {
-                    whileNotTrue(function() {
+                    whileNotTrue(function () {
                         return pageVar.find(selector).is(':visible')
-                    }, done, 'waitUntilVisible: '+selector);
+                    }, done, 'waitUntilVisible: ' + selector);
                 },
                 waitWhileVisible: function waitWhileVisible(selector, done) {
-                    whileNotTrue(function() {
+                    whileNotTrue(function () {
                         return !pageVar.find(selector).is(':visible');
-                    }, done, 'waitWhileVisible: '+selector);
+                    }, done, 'waitWhileVisible: ' + selector);
                 },
-                waitUntilTrue: function(test, done) {
-                    whileNotTrue(function() {
+                waitUntilTrue: function (test, done) {
+                    whileNotTrue(function () {
                         return test();
-                    }, done, 'waitUntilTrue: '+ test.toString());
+                    }, done, 'waitUntilTrue: ' + test.toString());
                 },
-                wait: function(ms, done) {
+                wait: function (ms, done) {
                     setTimeout(done, ms);
                 },
                 click: function (selector) {
@@ -216,22 +228,22 @@
                         }
                     }
                 },
-                log: function(message) {
+                log: function (message) {
                     console.log(message);
                 },
-                dump: function(selector, filename) {
+                dump: function (selector, filename) {
                     selector = selector || 'html';
                     var html = pageVar(selector).html();
                     filename ? console.log(html) : alert(JSON.stringify(['writeFile', filename, html]));
                 },
-                capture: function(selector, filename) {
+                capture: function (selector, filename) {
                     filename = filename || 'capture.png';
                     var el = pageVar.find(selector).get(0);
                     html2canvas(el, {
-                        onrendered: function(canvas) {
-                            var s = '<img src="'+canvas.toDataURL('image/png')+'">'
+                        onrendered: function (canvas) {
+                            var s = '<img src="' + canvas.toDataURL('image/png') + '">'
                             alert(JSON.stringify(['writeFile', filename, s]));
-                            console.log('captured: '+selector);
+                            console.log('captured: ' + selector);
                         }
                     });
                 },
@@ -275,7 +287,7 @@
         var context = testsFrame ? testsFrame.get(0) : window;
         _.extend(context, {
             createTestWindow: function (pageId) {
-                if(!testWindows[pageId]) {
+                if (!testWindows[pageId]) {
                     testWindows[pageId] = TestPage(pageId);
                 }
             },

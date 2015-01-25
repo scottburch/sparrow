@@ -414,37 +414,19 @@ Call a function.  Currently this is the best way to add expects into your test c
 ```
 
 ####<a name="extend">.extend(obj)
-__NOTE: there is a current issue with .extend(), it will be resolved soon__
 
-Extend a window variable with new functions.
+Add functions to sparrow. The first argument will be the test window variable.
+For example, if you created a test window called "myWin", then called __$myWin.write()__.  winVar would be $myWin.
 
 *NOTE: To add an async function, the final argument must be named 'done'*
 
 ```javascript
-describe('extending windowVars', function() {
-
-    it('should accept any function', function(done) {
-        createTestWindow('extend');
-
-        $extend.extend({
-            write: function(selector, content) {
-                $extend.find(selector).append(content);
+        sparrow.extend({
+            write: function(winVar, selector, content) {
+                winVar.find(selector).append(content);
             },
-            waitForTesting: function(done) {
-                $extend.waitForText('testing', done);
+            waitForTesting: function(winVar, done) {
+                winVar.waitForText('testing', done);
             }
         });
-
-        $extend.async(done)
-            .waitForTesting()
-            .syncFn(function() {
-                expect($extend.find('body').html()).toBe('testing');
-            })
-            .run();
-
-        setTimeout(function() {
-            $extend.write('body', 'testing');
-        },500);
-    });
-});
 ```
