@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1520d09-aeaa-4b55-82fc-d8a1529b2d0a" name="Default" comment="added advanced debugging tips">
+    <list default="true" id="f1520d09-aeaa-4b55-82fc-d8a1529b2d0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparrow.iws" afterPath="$PROJECT_DIR$/sparrow.iws" />
     </list>
@@ -31,13 +31,13 @@
     <leaf>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11149826" vertical-offset="6523" max-vertical-offset="6825">
-              <caret line="437" column="112" selection-start-line="437" selection-start-column="112" selection-end-line="437" selection-end-column="112" />
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6538" max-vertical-offset="6885">
+              <caret line="453" column="73" selection-start-line="453" selection-start-column="73" selection-end-line="453" selection-end-column="73" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
+          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
         </entry>
@@ -123,8 +123,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="360" />
-    <option name="y" value="47" />
+    <option name="x" value="14" />
+    <option name="y" value="27" />
     <option name="width" value="1171" />
     <option name="height" value="845" />
   </component>
@@ -168,34 +168,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sparrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -683,7 +655,7 @@
       <workItem from="1421802843670" duration="186000" />
       <workItem from="1421807101676" duration="6247000" />
       <workItem from="1421941504833" duration="1581000" />
-      <workItem from="1421943595816" duration="20855000" />
+      <workItem from="1421943595816" duration="22700000" />
     </task>
     <task id="LOCAL-00001" summary="nameing rework">
       <created>1421721158749</created>
@@ -961,14 +933,26 @@
       <option name="project" value="LOCAL" />
       <updated>1422237707005</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added advanced debugging tips">
+      <created>1422250590496</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1422250590496</updated>
+    </task>
+    <task id="LOCAL-00048" summary="docs fix">
+      <created>1422250748888</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1422250748888</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58663000" />
+    <option name="totallyTimeSpent" value="60508000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="360" y="47" width="1171" height="845" extended-state="0" />
+    <frame x="14" y="27" width="1171" height="845" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1016,8 +1000,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="adding readme" />
-    <MESSAGE value="fixed bug in runner" />
     <MESSAGE value="adding documentation" />
     <MESSAGE value="added tests for function runners and documentation for headless operation" />
     <MESSAGE value="updated fnSpec" />
@@ -1041,7 +1023,9 @@
     <MESSAGE value="changed pageVar to winVar" />
     <MESSAGE value="changing &quot;page&quot; stuff to &quot;win&quot;" />
     <MESSAGE value="patched tab frame hiding under tab bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="patched tab frame hiding under tab bar" />
+    <MESSAGE value="added advanced debugging tips" />
+    <MESSAGE value="docs fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1434,14 +1418,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11149826" vertical-offset="6523" max-vertical-offset="6825">
-          <caret line="437" column="112" selection-start-line="437" selection-start-column="112" selection-end-line="437" selection-end-column="112" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6538" max-vertical-offset="6885">
+          <caret line="453" column="73" selection-start-line="453" selection-start-column="73" selection-end-line="453" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
     </entry>

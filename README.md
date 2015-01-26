@@ -447,3 +447,8 @@ and put your debug code inside of the passed function.  The same technique works
     })
     .run()
 ```
+
+## Feedback
+
+If you find Sparrow useful, please let me know.  If you have any questions or concerns,
+please feel free to let me know at <a href="mailto:scott@bulldoginfo.com">scott@bulldoginfo.com</a>.
