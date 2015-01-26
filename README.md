@@ -21,9 +21,10 @@ Sparrow:
 3) type __'npm install'__ (requires [node](http://nodejs.org/))
 
 4) type __'grunt jasmine:headed:build'__ to create specRunner.html (requires [grunt](http://gruntjs.com/))
+<br>__NOTE: Make sure you run this command after creating new spec/helper files and after upgrading Sparrow__
 
 5) open __runner.html__ in a browser (tested with newest Chrome and FF)
-__(NOTE: FF seems to allow running from the local filesystem.  Chrome requires running it from a web server)__
+<br>__(NOTE: FF seems to allow running from the local filesystem.  Chrome requires running it from a web server)__
 
 
 6) Look at the files in */specs* to see some of the possibilities
