@@ -452,3 +452,8 @@ and put your debug code inside of the passed function.  The same technique works
 
 If you find Sparrow useful, please let me know.  If you have any questions or concerns,
 please feel free to let me know at <a href="mailto:scott@bulldoginfo.com">scott@bulldoginfo.com</a>.
+
+I created Sparrow because none of the other testing frameworks I found had the features I was looking
+for.  I have found this framework very useful for testing production websites.
+
+If you are looking for someone to setup functional testing for your web application or website, contact me.
