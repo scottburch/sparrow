@@ -50,9 +50,9 @@
             }
             $j('#pagePanel').append('<iframe class="test-page" id="' + id + '"></iframe>');
             frame = $j('iframe#' + id);
-            createwinVariable();
+            createWinVar();
             frame.bind('load', function () {
-                createwinVariable()
+                createWinVar()
                 var done = currentOpenDoneCB;
                 currentOpenDoneCB = undefined;
                 done && done();
@@ -60,12 +60,8 @@
         }
 
 
-        function createwinVariable() {
+        function createWinVar() {
             var contents = frame.contents();
-//            winVar = {
-//                find: contents.find.bind(contents),
-//                get: contents.get.bind(contents)
-//            };
             winVar = frame.contents();
             winVar.$window = frame.get(0).contentDocument.defaultView;
 

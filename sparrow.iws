@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1520d09-aeaa-4b55-82fc-d8a1529b2d0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runner.js" afterPath="$PROJECT_DIR$/runner.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparrow.iws" afterPath="$PROJECT_DIR$/sparrow.iws" />
     </list>
     <ignored path="sparrow.iws" />
@@ -29,24 +29,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6538" max-vertical-offset="6885">
-              <caret line="453" column="73" selection-start-line="453" selection-start-column="73" selection-end-line="453" selection-end-column="73" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.724138" vertical-offset="6673" max-vertical-offset="6960">
+              <caret line="454" column="0" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+          <provider editor-type-id="MarkdownPreviewEditor">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="waitForSpec.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/specs/waitForSpec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3617021" vertical-offset="946" max-vertical-offset="1275">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="runner.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.357143" vertical-offset="405" max-vertical-offset="4605">
-              <caret line="37" column="70" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="70" />
+            <state vertical-scroll-proportion="-4.285714" vertical-offset="810" max-vertical-offset="4545">
+              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -109,9 +119,9 @@
         <option value="$PROJECT_DIR$/helpers/exampleHelper.js" />
         <option value="$PROJECT_DIR$/helpers/configHelper.js" />
         <option value="$PROJECT_DIR$/specs/extendSpec.js" />
-        <option value="$PROJECT_DIR$/runner.js" />
         <option value="$PROJECT_DIR$/headed.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/runner.js" />
       </list>
     </option>
   </component>
@@ -655,13 +665,7 @@
       <workItem from="1421802843670" duration="186000" />
       <workItem from="1421807101676" duration="6247000" />
       <workItem from="1421941504833" duration="1581000" />
-      <workItem from="1421943595816" duration="22700000" />
-    </task>
-    <task id="LOCAL-00001" summary="nameing rework">
-      <created>1421721158749</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1421721158749</updated>
+      <workItem from="1421943595816" duration="23986000" />
     </task>
     <task id="LOCAL-00002" summary="waitFor spec update">
       <created>1421724343136</created>
@@ -945,11 +949,23 @@
       <option name="project" value="LOCAL" />
       <updated>1422250748888</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="doc update">
+      <created>1422256016961</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1422256016961</updated>
+    </task>
+    <task id="LOCAL-00050" summary="docs update">
+      <created>1422258470067</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1422258470067</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60508000" />
+    <option name="totallyTimeSpent" value="61794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="27" width="1171" height="845" extended-state="0" />
@@ -963,7 +979,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4869186" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4869186" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1000,8 +1016,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="adding documentation" />
-    <MESSAGE value="added tests for function runners and documentation for headless operation" />
     <MESSAGE value="updated fnSpec" />
     <MESSAGE value="speed up tests" />
     <MESSAGE value="add loop test" />
@@ -1025,13 +1039,27 @@
     <MESSAGE value="patched tab frame hiding under tab bar" />
     <MESSAGE value="added advanced debugging tips" />
     <MESSAGE value="docs fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs fix" />
+    <MESSAGE value="doc update" />
+    <MESSAGE value="docs update" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/specs/waitForSpec.js</url>
+          <line>71</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="23" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JavascriptDebugType">
+        <watch expression="expect" language="JavaScript" />
+        <watch expression="expect(1)" language="JavaScript" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1352,14 +1380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/waitForSpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.642857" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="74" column="60" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="750">
@@ -1388,14 +1408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <caret line="10" column="11" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.357143" vertical-offset="405" max-vertical-offset="4605">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -1430,14 +1442,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6538" max-vertical-offset="6885">
-          <caret line="453" column="73" selection-start-line="453" selection-start-column="73" selection-end-line="453" selection-end-column="73" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.724138" vertical-offset="6673" max-vertical-offset="6960">
+          <caret line="454" column="0" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+      <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.285714" vertical-offset="810" max-vertical-offset="4545">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/waitForSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3617021" vertical-offset="946" max-vertical-offset="1275">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
