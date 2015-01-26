@@ -433,10 +433,10 @@ For example, if you created a test window called "myWin", then called __$myWin.w
 
 ##More advanced stuff
 
-###Debugging in the middle of using the async modal
+###Debugging in the middle of an async monad chain
 
-The easiest way to debug in the middle of the async chain is to use syncFn. Add a temporary .syncFn() call and put your debug code inside of the
-passed function.  The same technique works for setting breakpoints.
+The easiest way to debug in the middle of the async chain is to use syncFn. Add a temporary .syncFn() call
+and put your debug code inside of the passed function.  The same technique works for setting breakpoints.
 
 ```javascript
     $win.async(done)
