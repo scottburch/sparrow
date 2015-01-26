@@ -2,15 +2,15 @@
     "use strict";
     var testWindows = {}, currentDone, extendWinHelpers = {};
 
-    var testsFrame = $j('iframe#tests');
-    testsFrame = testsFrame.length ? testsFrame : false;
-
     global.sparrow = {
         WAIT_TIME: 20000,
         extend: function (obj) {
             _.extend(extendWinHelpers, obj);
         }
     };
+
+    var testsFrame = $j('iframe#tests');
+    testsFrame = testsFrame.length ? testsFrame : false;
 
     addTestHelpers();
     testsFrame && startTests();
@@ -73,14 +73,17 @@
 
 
             function addWinHelpers() {
-                var extendHelpers = _.reduce(extendWinHelpers, function(memo, fn, name) {
-                    memo[name] = _.partial(fn, winVar);
-                    memo[name].hasDone = hasDone(fn);
-                    return memo;
-                }, {});
-                _.extend(winVar, extendHelpers, winHelpers());
+                _.extend(winVar, wrappedExtendHelpers(), winHelpers());
                 addFunctional();
                 addAsyncMonad();
+
+                function wrappedExtendHelpers() {
+                    return _.reduce(extendWinHelpers, function(memo, fn, name) {
+                        memo[name] = _.partial(fn, winVar);
+                        memo[name].hasDone = hasDone(fn);
+                        return memo;
+                    }, {});
+                }
             }
 
             function addAsyncMonad() {
