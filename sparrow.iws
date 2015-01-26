@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1520d09-aeaa-4b55-82fc-d8a1529b2d0a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/helpers/sparrowHelper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runner.js" afterPath="$PROJECT_DIR$/runner.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparrow.iws" afterPath="$PROJECT_DIR$/sparrow.iws" />
     </list>
@@ -32,8 +33,18 @@
       <file leaf-file-name="runner.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7291667" vertical-offset="0" max-vertical-offset="4590">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5208333" vertical-offset="3180" max-vertical-offset="3930">
+              <caret line="222" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sparrowHelper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/sparrowHelper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="735">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -651,13 +662,7 @@
       <workItem from="1421802843670" duration="186000" />
       <workItem from="1421807101676" duration="6247000" />
       <workItem from="1421941504833" duration="1581000" />
-      <workItem from="1421943595816" duration="27233000" />
-    </task>
-    <task id="LOCAL-00003" summary="adding waitFor specs">
-      <created>1421724765063</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1421724765063</updated>
+      <workItem from="1421943595816" duration="28564000" />
     </task>
     <task id="LOCAL-00004" summary="adding waitFor specs">
       <created>1421725299609</created>
@@ -947,11 +952,17 @@
       <option name="project" value="LOCAL" />
       <updated>1422258854253</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="small refactor">
+      <created>1422307586204</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1422307586205</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65041000" />
+    <option name="totallyTimeSpent" value="66372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="27" width="1171" height="845" extended-state="0" />
@@ -1002,7 +1013,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="speed up tests" />
     <MESSAGE value="add loop test" />
     <MESSAGE value="add docs" />
     <MESSAGE value="add helper file to hold directory" />
@@ -1027,7 +1037,8 @@
     <MESSAGE value="doc update" />
     <MESSAGE value="docs update" />
     <MESSAGE value="fix typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix typo" />
+    <MESSAGE value="small refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="small refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1438,10 +1449,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/sparrowHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="735">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7291667" vertical-offset="0" max-vertical-offset="4590">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5208333" vertical-offset="3180" max-vertical-offset="3930">
+          <caret line="222" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding />
         </state>
       </provider>
