@@ -123,6 +123,11 @@ or you can do things the easier way and __use the sparrow async() monad__.
 
         });
 
+        function myAsyncFunction(done) {
+            // do something async
+            done();
+        }
+
     });
 ```
 
