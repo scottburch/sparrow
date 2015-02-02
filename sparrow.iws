@@ -31,12 +31,12 @@
     <leaf>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
+          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84134614" vertical-offset="1380" max-vertical-offset="7050">
-              <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2061" max-vertical-offset="7275">
+              <caret line="171" column="51" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -45,8 +45,8 @@
       <file leaf-file-name="runner.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2835" max-vertical-offset="4560">
-              <caret line="201" column="32" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3600" max-vertical-offset="4560">
+              <caret line="263" column="18" selection-start-line="259" selection-start-column="0" selection-end-line="263" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -165,7 +165,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,6 +200,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,7 +403,12 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -427,12 +432,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -470,10 +470,6 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -493,6 +489,10 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -529,6 +529,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -550,22 +566,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
@@ -683,13 +683,8 @@
       <workItem from="1421941504833" duration="1581000" />
       <workItem from="1421943595816" duration="29929000" />
       <workItem from="1422392817082" duration="172000" />
-      <workItem from="1422898173498" duration="112000" />
-    </task>
-    <task id="LOCAL-00007" summary="adding readme">
-      <created>1421727898065</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1421727898065</updated>
+      <workItem from="1422898173498" duration="126000" />
+      <workItem from="1422899052563" duration="516000" />
     </task>
     <task id="LOCAL-00008" summary="fixed bug in runner">
       <created>1421728666383</created>
@@ -979,11 +974,17 @@
       <option name="project" value="LOCAL" />
       <updated>1422392922323</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="docs update">
+      <created>1422898296613</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1422898296619</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68021000" />
+    <option name="totallyTimeSpent" value="68551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="27" width="1171" height="845" extended-state="0" />
@@ -1053,13 +1054,13 @@
     <MESSAGE value="added advanced debugging tips" />
     <MESSAGE value="docs fix" />
     <MESSAGE value="doc update" />
-    <MESSAGE value="docs update" />
     <MESSAGE value="fix typo" />
     <MESSAGE value="small refactor" />
     <MESSAGE value="create sparrowHelper and start moving helpers out of runner.js" />
     <MESSAGE value="updating readme" />
     <MESSAGE value="moved helpers back into runner.js.  Caused problem for some reason with .click()" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved helpers back into runner.js.  Caused problem for some reason with .click()" />
+    <MESSAGE value="docs update" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1470,19 +1471,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2835" max-vertical-offset="4560">
-          <caret line="201" column="32" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3600" max-vertical-offset="4560">
+          <caret line="263" column="18" selection-start-line="259" selection-start-column="0" selection-end-line="263" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84134614" vertical-offset="1380" max-vertical-offset="7050">
-          <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2061" max-vertical-offset="7275">
+          <caret line="171" column="51" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
           <folding />
         </state>
       </provider>

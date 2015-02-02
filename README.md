@@ -169,6 +169,7 @@ Unpack sparrow someplace in the /public directory.  I put it in /public/sparrow.
 * [.fn(someFunction)](#fn)
 * [.syncFn(someFunction)](#syncFn)
 * [.extend(obj)](#extend)
+* [.http.post(url, data, success, done)](#httpPost)
 
 ####<a name="createTestWindow">createTestWindow('name')
 
@@ -435,7 +436,21 @@ For example, if you created a test window called "myWin", then called __$myWin.w
                 winVar.waitForText('testing', done);
             }
         });
-```
+`
+####<a name="httpPost">.http.post(url, data, success, done)
+
+```javascript
+        $tests.async(done)
+            .fn(function(done) {
+                $tests.http.post('/some/url', {some:'data'}, _.partial(checkReturn, done));
+            })
+            .run();
+
+        function checkReturn(done, ret) {
+            expect(ret).toBe('<some> <html>');
+            done();
+        }
+`````
 
 ##More advanced stuff
 
