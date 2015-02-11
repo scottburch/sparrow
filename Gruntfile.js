@@ -41,4 +41,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.registerTask('default', ['jasmine:headless']);
+
+    grunt.registerTask('headless', ['jasmine:headless']);
+    grunt.registerTask('headed', ['jasmine:headed:build']);
 };
