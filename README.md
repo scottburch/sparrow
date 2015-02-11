@@ -20,7 +20,7 @@ Sparrow:
 
 3) type __'npm install'__ (requires [node](http://nodejs.org/))
 
-4) type __'grunt jasmine:headed:build'__ to create specRunner.html (requires [grunt](http://gruntjs.com/))
+4) type __'grunt headed'__ to create specRunner.html (requires [grunt](http://gruntjs.com/))
 <br>__NOTE: Make sure you run this command after creating new spec/helper files and after upgrading Sparrow__
 
 5) open __runner.html__ in a browser (tested with newest Chrome and FF)
@@ -40,7 +40,7 @@ to run 'should do something' use __?spec=should%20do%20something__ at the end of
 
 ##Running tests in headless mode
 
-To run tests in headless/CI mode.  type __'grunt'__ or __'grunt jasmine:headless'__
+To run tests in headless/CI mode.  type __'grunt'__ or __'grunt headless'__
 
 If you need to run the tests from a server with dynamic content, simply add the host address in Gruntfile.js.
 It is best to run the tests from the source directory the server is pointed to or a symlink.
