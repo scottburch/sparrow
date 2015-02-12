@@ -21,7 +21,8 @@ Sparrow:
 3) type __'npm install'__ (requires [node](http://nodejs.org/))
 
 4) type __'grunt headed'__ to create specRunner.html (requires [grunt](http://gruntjs.com/))
-<br>__NOTE: Make sure you run this command after creating new spec/helper files and after upgrading Sparrow__
+<br>__NOTE: Make sure you run this command after creating new spec/helper files and after upgrading Sparrow__.
+You can also run `grunt watch` to build specRunner.html automatically when spec/helper files change.
 
 5) open __runner.html__ in a browser (tested with newest Chrome and FF)
 <br>__(NOTE: FF seems to allow running from the local filesystem.  Chrome requires running it from a web server)__
