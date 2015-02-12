@@ -36,10 +36,17 @@ module.exports = function(grunt) {
                     vendor: sparrowFiles.vendor.headed.concat(['vendor/moment.js'])
                 }
             }
+        },
+        watch: {
+          specs: {
+            files: 'specs/**/*Spec.js',
+            tasks: 'jasmine:headed:build'
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['jasmine:headless']);
 
     grunt.registerTask('headless', ['jasmine:headless']);
