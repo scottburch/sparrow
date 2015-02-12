@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         },
         watch: {
           specs: {
-            files: 'specs/**/*Spec.js',
+            files: ['specs/**/*Spec.js', 'helpers/*Helper.js'],
             tasks: 'jasmine:headed:build'
           }
         }
