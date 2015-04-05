@@ -453,7 +453,12 @@ For example, if you created a test window called "myWin", then called __$myWin.w
         }
 `````
 
-##More advanced stuff
+##Troubleshooting
+
+### Accessing the window object in a tab
+You can use the $window variable to access the window object inside of a tab from the debugging console.  
+For example, if your tab is $page, then $page.$window will give you the window variable within that tab. 
+From there you can access any global variables.
 
 ###Debugging in the middle of an async monad chain
 
