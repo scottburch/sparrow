@@ -205,6 +205,9 @@
                         var field = winVar.find('[name="' + name + '"]', form);
                         field.focus();
                         field.val(value);
+                        // HACK: will trigger events on an element if jquery exists in the page
+                        // Needs to be converted to native document method
+                        pageVar.$window.jQuery && pageVar.$window.jQuery('[name="' + name + '"]').trigger('change');
                     });
                 },
                 log: function (message) {
