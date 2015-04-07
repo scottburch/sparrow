@@ -18,6 +18,19 @@ describe('waitFor*, waitWhile* and waitUntil* tests', function () {
             }, 100);
         });
 
+        it('should wait for async function to return true', function(done) {
+            var count = 0;
+            $waitFor.async(done)
+                .waitUntilTrue(asyncFunc)
+                .run();
+
+            function asyncFunc(done) {
+                setTimeout(function() {
+                    ++count === 2 ? done(1) : done(0);
+                },1);
+            }
+        })
+
     });
 
     describe('waitForSelector', function () {
@@ -77,4 +90,6 @@ describe('waitFor*, waitWhile* and waitUntil* tests', function () {
                 .run();
         });
     });
+
+
 });

@@ -257,6 +257,26 @@ Wait until the test function returns true
     }
 ```
 
+waitUntilTrue can also takes an async function containing a "done" final argument.  
+The passed async function will be called until it calls done() with a truthy value or sparrow.WAIT_TIME is reached.
+
+```javascript
+        it('should do something', function(done) {
+            var count = 0;
+            $waitFor.async(done)
+                .waitUntilTrue(asyncFunc)
+                .run();
+
+            function asyncFunc(done) {
+                setTimeout(function() {
+                    ++count === 2 ? done(1) : done(0);
+                },1);
+            }
+        })
+
+    });
+```
+
 ####<a name="waitForText">.waitForText(text, doneCB)
 
 Wait until the text is visible on the webpage

@@ -123,14 +123,6 @@
             }
 
 
-            function hasDone(fn) {
-                if(fn.hasDone !== undefined) {
-                    return fn.hasDone;
-                }
-                var fnSig = fn.toString().split('\n')[0].replace(/[^\(]*\(([^\)]*).*/, '$1').replace(/ /g, '').split(',');
-                return   fn.hasDone = _.last(fnSig) === 'done';
-            }
-
             function addFunctional() {
                 winVar.fn = {};
                 _.each(_.functions(winVar), function (fnName) {
@@ -151,25 +143,43 @@
             }
         }
 
+        function hasDone(fn) {
+            if(fn.hasDone !== undefined) {
+                return fn.hasDone;
+            }
+            var fnSig = fn.toString().split('\n')[0].replace(/[^\(]*\(([^\)]*).*/, '$1').replace(/ /g, '').split(',');
+            return   fn.hasDone = _.last(fnSig) === 'done';
+        }
+
         function winHelpers() {
             function whileNotTrue(test, done, timeoutMsg) {
                 var start = new Date().getTime();
                 loop();
                 function loop() {
-                    test() ? done() : setTimeout(function () {
-                        if (new Date().getTime() - start > sparrow.WAIT_TIME) {
-                            var ctx = testsFrame ? getTestsCtx() : window;
-                            ctx.fail('TIMEOUT - ' + timeoutMsg);
-                            testsFrame || winVar.capture('body', timeoutMsg.replace(' ', '_') + '.html');
-                            if (currentDone) {
-                                var tempDone = currentDone;
-                                currentDone = undefined;
-                                tempDone();
+                    if(hasDone(test)) {
+                        test(function(result) {
+                            result ? done() : checkLoop();
+                        });
+                    } else {
+                        test() ? done() : checkLoop();
+                    }
+
+                    function checkLoop() {
+                        setTimeout(function () {
+                            if (new Date().getTime() - start > sparrow.WAIT_TIME) {
+                                var ctx = testsFrame ? getTestsCtx() : window;
+                                ctx.fail('TIMEOUT - ' + timeoutMsg);
+                                testsFrame || winVar.capture('body', timeoutMsg.replace(' ', '_') + '.html');
+                                if (currentDone) {
+                                    var tempDone = currentDone;
+                                    currentDone = undefined;
+                                    tempDone();
+                                }
+                            } else {
+                                loop();
                             }
-                        } else {
-                            loop();
-                        }
-                    }, 100);
+                        }, 100);
+                    }
                 }
             }
 
@@ -195,9 +205,7 @@
                     }, done, 'waitWhileVisible: ' + selector);
                 },
                 waitUntilTrue: function (test, done) {
-                    whileNotTrue(function () {
-                        return test();
-                    }, done, 'waitUntilTrue: ' + test.toString());
+                    whileNotTrue(test, done, 'waitUntilTrue: ' + test.toString());
                 },
                 fill: function (selector, object) {
                     var form = winVar.find(selector);
@@ -207,7 +215,7 @@
                         field.val(value);
                         // HACK: will trigger events on an element if jquery exists in the page
                         // Needs to be converted to native document method
-                        pageVar.$window.jQuery && pageVar.$window.jQuery('[name="' + name + '"]').trigger('change');
+                        winVar.$window.jQuery && pageVar.$window.jQuery('[name="' + name + '"]').trigger('change');
                     });
                 },
                 log: function (message) {
