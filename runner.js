@@ -215,7 +215,7 @@
                         field.val(value);
                         // HACK: will trigger events on an element if jquery exists in the page
                         // Needs to be converted to native document method
-                        winVar.$window.jQuery && pageVar.$window.jQuery('[name="' + name + '"]').trigger('change');
+                        winVar.$window.jQuery && winVar.$window.jQuery('[name="' + name + '"]').trigger('change');
                     });
                 },
                 log: function (message) {

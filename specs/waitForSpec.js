@@ -29,7 +29,20 @@ describe('waitFor*, waitWhile* and waitUntil* tests', function () {
                     ++count === 2 ? done(1) : done(0);
                 },1);
             }
-        })
+        });
+
+        it('should run other commands after the waitUntilTrue', function(done) {
+            var reallyDone = false;
+            $waitFor.async(checkReallyDone)
+                .waitUntilTrue(function(done) {done(true)})
+                .syncFn(function() {reallyDone = true})
+                .run();
+
+            function checkReallyDone() {
+                expect(reallyDone).toBe(true);
+                done();
+            }
+        });
 
     });
 
